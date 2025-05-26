@@ -1,0 +1,97 @@
+env
+# Fichiers .gitignore pour un projet OCR (CRAFT, EasyOCR, Tesseract, etc.)
+
+### Python ###
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+.python-version
+
+### Environnements virtuels ###
+.env/
+.venv/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+### Modèles et gros fichiers ###
+*.pth
+*.onnx
+*.pb
+*.h5
+*.weights
+*.tflite
+*.mlmodel
+*.pt
+*.bin
+*.joblib
+
+### Données et résultats ###
+/data/
+!/data/.gitkeep  # Garder le dossier mais pas son contenu
+/output/
+/results/
+/annotations/
+/temp/
+*.jpg
+*.png
+*.jpeg
+*.pdf
+*.csv
+*.xlsx
+*.npy
+*.npz
+
+### Configurations et IDE ###
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+### Jupyter Notebook ###
+.ipynb_checkpoints/
+*.ipynb
+
+### Fichiers système ###
+.DS_Store
+Thumbs.db
+*.db
+
+### Fichiers de cache ###
+.cache/
+*.cache
+
+### Fichiers de logs ###
+*.log
+logs/
+
+### Fichiers spécifiques aux outils OCR ###
+/tessdata/  # Dossiers Tesseract (sauf si vous versionnez des .traineddata personnalisés)
+!/tessdata/.gitkeep
+
+
+### Fichiers/dossiers tpm
+/tmp
