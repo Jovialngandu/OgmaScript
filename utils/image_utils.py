@@ -30,7 +30,7 @@ def resizeImage(img,size=(24,24)):
 
     #size will be a tupple like this (32,32)
   
-    return cv2.resize(img, (1280,128))
+    return cv2.resize(img, size           )
 
 
 def show(img): 
