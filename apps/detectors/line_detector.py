@@ -11,7 +11,7 @@ class LineDetector(App):
         super().__init__()
         self.img=img
 
-        
+
 
     def process(self):
 
@@ -20,12 +20,9 @@ class LineDetector(App):
         kernel=np.ones((1,30),np.uint8)
         lignes=[]
         result=[]
-        
+       
         if background_color < 128:
-    
-
-            image_gray= image_utils.invertImage(image_gray)
-            
+            #image_gray= image_utils.invertImage(image_gray)
             _, thresh = cv2.threshold(image_gray, 100, 255, cv2.THRESH_BINARY)
 
         else :
