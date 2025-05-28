@@ -19,6 +19,7 @@ class charDetector(App):
         kernel=np.ones((40,1),np.uint8)
         chars_regions=[]
         chars=[]
+        rois=[]
 
         if back_color > 28 and back_color <200:
             _, thresh = cv2.threshold(img_gray, 80, 255, cv2.THRESH_BINARY)
@@ -49,10 +50,11 @@ class charDetector(App):
                 num=num+1
                 roi=img_gray[y:y+h,x:x+w]
                 cv2.imwrite(f"tmp/chars/{self.pre_name}char{num}.png",roi)
+                rois.append({"roi":roi,"name":f"{self.pre_name}char{num}"})
                 cv2.rectangle(img_copy,(x,y),(x+w,y+h),(255,0,0),1)
         
         #image_utils.show(image_utils.resizeImage(img_copy,(1280,128)))
 
 
-        return {"chars":chars,"regions":chars_regions_sorted}
+        return {"chars":chars,"regions":chars_regions_sorted,"rois":rois}
 
